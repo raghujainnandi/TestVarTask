@@ -1,24 +1,25 @@
-package qaAutomation_TestCases;
+package TestSuite;
 
 import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import qaAutomation_TestVagrant.Player;
-import qaAutomation_TestVagrant.readDataFromJson;
 
-public class TestTeam extends readDataFromJson {
+import TestClasses.Player;
+import qaAutomation_TestVagrant.ReadDataFromJson;
+
+public class TestCases extends ReadDataFromJson {
 
 	List<Player> players;
 	
 	@BeforeMethod
 	public void setUp() throws Exception
 	{
-		 players=super.readJson();
+		 players=super.rcbPlayers();
 	}
 	
 	@Test
-	public void FourForeignPlayers() throws Exception {
+	public void fourForeignPlayers() throws Exception {
 		int count = 0;
 		int Expected = 4;
 		for (int i = 0; i <players.size(); i++) {
@@ -37,7 +38,7 @@ public class TestTeam extends readDataFromJson {
 	}
 
 	@Test
-	public void AtleastOneWicketKeeper() throws Exception {
+	public void atleastOneWicketKeeper() throws Exception {
 		int wk = 0;
 		int Expected = 1;
 		for (int i = 0; i <players.size(); i++) {

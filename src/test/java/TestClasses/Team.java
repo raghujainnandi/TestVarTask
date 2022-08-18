@@ -1,4 +1,4 @@
-package qaAutomation_TestVagrant;
+package TestClasses;
 
 import java.util.List;
 
@@ -7,6 +7,6 @@ public class Team {
 	String name;
 	String location;
 	
-	List<Player> player;
+	public List<Player> player;
 
 }

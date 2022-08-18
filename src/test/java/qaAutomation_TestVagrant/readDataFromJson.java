@@ -6,13 +6,16 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
-public class readDataFromJson {
+import TestClasses.Player;
+import TestClasses.Team;
+
+public class ReadDataFromJson {
 
 	public static String readFileAsString(String file) throws Exception {
 		return new String(Files.readAllBytes(Paths.get(file)));
 	}
 
-	public static List<Player> readJson() throws Exception {
+	public static List<Player> rcbPlayers() throws Exception {
 		String file = "C:\\Users\\raghu.jain\\Desktop\\gitcode\\TestVagrantTask\\src\\test\\resources\\rcb.json";
 		String json = readFileAsString(file);
 		Gson gson = new Gson();

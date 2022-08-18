@@ -1,4 +1,4 @@
-package qaAutomation_TestVagrant;
+package TestClasses;
 
 public class Player {
 	
